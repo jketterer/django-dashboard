@@ -1,0 +1,89 @@
+body {
+    background-color: #212f3c;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Establishes rules for flex-containers */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+}
+
+/* Sets rules for each weather container */
+.weather {
+    height: 25vw;
+    width: 18%;
+    margin: 8px;
+    padding: 10px;
+
+    justify-content: flex-start;
+    flex-flow: column;
+}
+
+.weather > div {
+    color: white;
+}
+
+.max {
+    font-size: 4.5vw;
+
+}
+
+.min {
+    font-size: 2.5vw;
+}
+
+hr {
+    width: 80%;
+    border: solid 0.3vw white;
+}
+
+.wi {
+    color: white; /* I don't know why but this needs to be set again */
+    font-size: 10vw;
+    padding-bottom: 10%;
+}
+
+.description {
+    font-size: 2.25vw;
+}
+/* *******END WEATHER******* */
+
+/* Formats news and date to be next to each other */
+
+#not-weather {
+    align-items: flex-start;
+    align-content: space-between;
+}
+
+.column {
+    width: 45%;
+    padding: 0px;
+}
+
+#news {
+    float: left;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: square;
+}
+
+li {
+    color: white;
+    padding: 5px;
+    font-size: 3vh;
+}
+
+#date > p {
+    color: white;
+    font-size: 8vw;
+    line-height: 0px;
+    float: right;
+    font-style: italic;
+}

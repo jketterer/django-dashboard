@@ -1,0 +1,68 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="{% static "/board/style.css" %}" />
+        <link rel="stylesheet" href="{% static "board/weather-icons.min.css" %}" />
+    </head>
+
+    <body>
+        <div class="container">
+            <section>
+                <div class="flex-container">
+                    <div class="weather flex-container">
+                        <i class="wi wi-owm-{{ weather.day1.code }}"></i>
+                        <div class="description">{{ weather.day1.description }}</div>
+                        <div class="max">{{ weather.day1.high_temp }}°</div>
+                        <div class="min">{{ weather.day1.low_temp }}°</div>
+                        <hr>
+                    </div>
+                    <div class="weather flex-container">
+                        <i class="wi wi-owm-{{ weather.day2.code }}"></i>
+                        <div class="description">{{ weather.day2.description }}</div>
+                        <div class="max">{{ weather.day2.high_temp }}°</div>
+                        <div class="min">{{ weather.day2.low_temp }}°</div>
+                    </div>
+                    <div class="weather flex-container">
+                        <i class="wi wi-owm-{{ weather.day3.code }}"></i>
+                        <div class="description">{{ weather.day3.description }}</div>
+                        <div class="max">{{ weather.day3.high_temp }}°</div>
+                        <div class="min">{{ weather.day3.low_temp }}°</div>
+                    </div>
+                    <div class="weather flex-container">
+                        <i class="wi wi-owm-{{ weather.day4.code }}"></i>
+                        <div class="description">{{ weather.day4.description }}</div>
+                        <div class="max">{{ weather.day4.high_temp }}°</div>
+                        <div class="min">{{ weather.day4.low_temp }}°</div>
+                    </div>
+                    <div class="weather flex-container">
+                        <i class="wi wi-owm-{{ weather.day5.code }}"></i>
+                        <div class="description">{{ weather.day5.description }}</div>
+                        <div class="max">{{ weather.day5.high_temp }}°</div>
+                        <div class="min">{{ weather.day5.low_temp }}°</div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="flex-container" id="not-weather">
+                    <div class="column" id="news">
+                        <ul>
+                            <li>{{ headlines.one }}</li>
+                            <li>{{ headlines.two }}</li>
+                            <li>{{ headlines.three}}</li>
+                            <li>{{ headlines.four }}</li>
+                            <li>{{ headlines.five }}</li>
+                        </ul>
+                    </div>
+                    <div class="column" id="date">
+                        <p>{% now "F jS" %}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
